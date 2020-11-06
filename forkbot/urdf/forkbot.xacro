@@ -2,13 +2,8 @@
 
 <robot name="robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <link name="body" />
-  <visual>
-  <origin> rpy="0 0 0" xyz ="0 0 0" />
-    <geometry>
-      <box size="0.3 0.6 0.15" />
-    </geometry>
-  </visual>
+  <link name="body">
+
   <inertial>
       <mass value="4.4047990875" />
       <origin xyz="-0.000327 0.000908 0.058457"/>
@@ -16,6 +11,14 @@
         iyy="0.002974822" iyz="0.000036294"
         izz="0.001434739" />
     </inertial>
+
+    <visual>
+     <origin xyz="0 0 0" rpy=" 0 0 0"/>
+      <geometry>
+       <box size=".4 .2 .1"/>
+      </geometry>
+   </visual>
+
   </link>
 
   <joint name="joint1" type="continuous">
@@ -23,14 +26,14 @@
     <child link="armL1"/>
     <origin xyz="0.15 0.2 0.15" rpy="0 0 0" />
     <geometry>
-      <cylinder> size="0.2 0.5 0.1"
+      <cylinder size="0.2 0.5 0.1"/>
     </geometry>
     <axis xyz="0 0 0" />
   </joint>
 
-  <link name="armL1" type="fixed"/>
+  <link name="armL1" type="fixed">
   <visual>
-  <origin> rpy="0 0 0" xyz ="0 0 0" />
+  <origin rpy="0 0 0" xyz ="0 0 0" />
     <geometry>
       <cylinder length="0.3" radius="0.025" />
     </geometry>
@@ -49,14 +52,14 @@
     <child link="armL2"/>
     <origin xyz="0 0 0" rpy="0 0 0" />
     <geometry>
-      <cylinder> size="0.2 0.5 0.1"
+      <cylinder size="0.2 0.5 0.1"/>
     </geometry>
     <axis xyz="0 0 0" />
   </joint>
 
-  <link name="armL2" />
+  <link name="armL2">
   <visual>
-  <origin> rpy="0 0 0" xyz ="0 0 0" />
+  <origin rpy="0 0 0" xyz ="0 0 0" />
     <geometry>
       <cylinder length="0.3" radius="0.025" />
     </geometry>
@@ -75,14 +78,14 @@
     <child link="armL3"/>
     <origin xyz="0 0 0.3" rpy="0 0 0" />
     <geometry>
-      <cylinder> size="0.2 0.5 0.1"
+      <cylinder size="0.2 0.5 0.1"/>
     </geometry>
     <axis xyz="0 0 0" />
   </joint>
 
-  <link name="armL3" />
+  <link name="armL3">
   <visual>
-  <origin> rpy="0 0 0" xyz ="0 0 0" />
+  <origin rpy="0 0 0" xyz ="0 0 0" />
     <geometry>
       <cylinder length="0.3" radius="0.025" />
     </geometry>
@@ -103,9 +106,9 @@
     <axis xyz="0 0 0" />
   </joint>
 
-  <link name="fork" />
+  <link name="fork">
   <visual>
-  <origin> rpy="0 0 0" xyz ="0 0 0" />
+  <origin rpy="0 0 0" xyz ="0 0 0" />
     <geometry>
       <box size="0.1 0.1 0.1" />
     </geometry>
