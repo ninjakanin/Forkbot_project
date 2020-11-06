@@ -18,9 +18,9 @@
 </include>
 
 
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find forkbot)/urdf/robot2.xacro'"/>
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find forkbot)/urdf/forkbot.xacro'"/>
 
-  <node name="forkbot1" pkg="gazebo_ros" type="spawn_model" output="screen"
-     args="-urdf -param forkbot -model forkbot1" />
+  <node name="forkbot_spawn" pkg="gazebo_ros" type="spawn_model" output="screen"
+   args="-urdf -param robot_description -model forkbot_robot" />
 
 </launch>
