@@ -1,0 +1,122 @@
+<?xml version='1.0'?>
+
+<robot name="robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <link name="body" />
+  <visual>
+  <origin> rpy="0 0 0" xyz ="0 0 0" />
+    <geometry>
+      <box size="0.3 0.6 0.15" />
+    </geometry>
+  </visual>
+  <inertial>
+      <mass value="4.4047990875" />
+      <origin xyz="-0.000327 0.000908 0.058457"/>
+      <inertia ixx="0.003000703" ixy="0.000000864" ixz="-0.000011312"
+        iyy="0.002974822" iyz="0.000036294"
+        izz="0.001434739" />
+    </inertial>
+  </link>
+
+  <joint name="joint1" type="continuous">
+    <parent link="body"/>
+    <child link="armL1"/>
+    <origin xyz="0.15 0.2 0.15" rpy="0 0 0" />
+    <geometry>
+      <cylinder> size="0.2 0.5 0.1"
+    </geometry>
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="armL1" type="fixed"/>
+  <visual>
+  <origin> rpy="0 0 0" xyz ="0 0 0" />
+    <geometry>
+      <cylinder length="0.3" radius="0.025" />
+    </geometry>
+  </visual>
+  <inertial>
+      <mass value="1.4047990875" />
+      <origin xyz="-0.000327 0.000908 0.058457"/>
+      <inertia ixx="0.003000703" ixy="0.000000864" ixz="-0.000011312"
+        iyy="0.002974822" iyz="0.000036294"
+        izz="0.001434739" />
+    </inertial>
+  </link>
+
+  <joint name="joint2" type="revolute">
+    <parent link="armL1"/>
+    <child link="armL2"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <geometry>
+      <cylinder> size="0.2 0.5 0.1"
+    </geometry>
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="armL2" />
+  <visual>
+  <origin> rpy="0 0 0" xyz ="0 0 0" />
+    <geometry>
+      <cylinder length="0.3" radius="0.025" />
+    </geometry>
+  </visual>
+  <inertial>
+      <mass value="1.4047990875" />
+      <origin xyz="-0.000327 0.000908 0.058457"/>
+      <inertia ixx="0.003000703" ixy="0.000000864" ixz="-0.000011312"
+        iyy="0.002974822" iyz="0.000036294"
+        izz="0.001434739" />
+    </inertial>
+  </link>
+
+  <joint name="joint3" type="revolute">
+    <parent link="armL2"/>
+    <child link="armL3"/>
+    <origin xyz="0 0 0.3" rpy="0 0 0" />
+    <geometry>
+      <cylinder> size="0.2 0.5 0.1"
+    </geometry>
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="armL3" />
+  <visual>
+  <origin> rpy="0 0 0" xyz ="0 0 0" />
+    <geometry>
+      <cylinder length="0.3" radius="0.025" />
+    </geometry>
+  </visual>
+  <inertial>
+      <mass value="1.4047990875" />
+      <origin xyz="-0.000327 0.000908 0.058457"/>
+      <inertia ixx="0.003000703" ixy="0.000000864" ixz="-0.000011312"
+        iyy="0.002974822" iyz="0.000036294"
+        izz="0.001434739" />
+    </inertial>
+  </link>
+
+  <joint name="joint4" type="revolute">
+    <parent link="armL3"/>
+    <child link="fork"/>
+    <origin xyz="0 0 0.3" rpy="0 0 0" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <link name="fork" />
+  <visual>
+  <origin> rpy="0 0 0" xyz ="0 0 0" />
+    <geometry>
+      <box size="0.1 0.1 0.1" />
+    </geometry>
+  </visual>
+  <inertial>
+      <mass value="1.4047990875" />
+      <origin xyz="-0.000327 0.000908 0.058457"/>
+      <inertia ixx="0.003000703" ixy="0.000000864" ixz="-0.000011312"
+        iyy="0.002974822" iyz="0.000036294"
+        izz="0.001434739" />
+    </inertial>
+  </link>
+
+</robot>
