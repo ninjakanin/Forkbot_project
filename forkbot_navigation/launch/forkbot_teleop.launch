@@ -7,3 +7,4 @@
     <remap from="turtlebot_teleop_keyboard/cmd_vel" to="cmd_vel"/>
   </node>
 </launch>
+<!-- har ikke jobbet nok med dette til at det skal fungere -->
